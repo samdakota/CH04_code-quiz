@@ -32,23 +32,25 @@ const questions = [
 ];
 
 var indexCount = 0;
-var time = 10;
+var time = 30;
 var timer;
-var score = 0;
-var finalScore = score;
 
 var questionContainer = document.getElementById("question");
 var startContainer = document.getElementById("start");
 var endContainer = document.getElementById("results");
+var timerContainer = document.getElementById("timer");
 
-var startButton = document.querySelector("#btn-start");
-var endButton = document.querySelector("btn-end");
+var startButton = document.getElementById("btn-start");
+var endButton = document.getElementById("btn-end");
+var timeLeft = document.getElementById("time-left");
+
+var nameInput = document.querySelector("input[name='initials']").value;
 
 var startClock = function () {
   timer = setInterval(function () {
     time--;
     if (time > 0) {
-      console.log(time);
+      timeLeft.innerHTML = time;
     } else {
       endQuiz();
     }
@@ -58,11 +60,12 @@ var startClock = function () {
 var startQuiz = function () {
   startContainer.classList.add("hide");
   questionContainer.classList.remove("hide");
+  timerContainer.classList.remove("hide");
   startClock();
   showQuestion();
 };
 
-startButton.addEventListener("click", startQuiz, startClock);
+startButton.addEventListener("click", startQuiz);
 
 var showQuestion = function () {
   const currentQuestion = questions[indexCount];
@@ -86,6 +89,7 @@ var showQuestion = function () {
 };
 
 function questionClick() {
+  var score = 0;
   if (this.value !== questions[indexCount].answer) {
     console.log("wrong!!");
     time -= 5;
@@ -104,16 +108,27 @@ function questionClick() {
 
 var endQuiz = function () {
   clearInterval(timer);
-  console.log(time);
   alert("quiz done!");
   endContainer.classList.remove("hide");
   questionContainer.classList.add("hide");
+  timerContainer.classList.add("hide");
+  console.log(score);
 };
+
+// var nameFormHandler = function (event) {
+//   event.preventDefault();
+//   if
+// }
+
+// var savedScoreObj = {
+//   name: nameInput,
+//   value: score,
+// };
 
 var saveScore = function () {
   var savedScoreList = document.getElementById("saved-scores");
   var newScore = document.createElement("li");
-  newScore.textContent = "this is a new score";
+  newScore.textContent = nameInput;
   savedScoreList.appendChild(newScore);
 };
 
