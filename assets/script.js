@@ -42,7 +42,7 @@ var startContainer = document.getElementById("start");
 var endContainer = document.getElementById("results");
 
 var startButton = document.querySelector("#btn-start");
-var submitButton = document.querySelector("btn-end");
+var endButton = document.querySelector("btn-end");
 
 var startClock = function () {
   timer = setInterval(function () {
