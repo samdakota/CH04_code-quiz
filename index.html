@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Potpourri</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <!-- load page with start button -->
+    <section class="quiz-element" id="start">
+        <h1 class="title-type" >Quiz</h1>
+        <div>
+            <p>Here are a bunch of questions about everything.</p>
+        </div>
+        <div>
+            <p>Ready to Begin?</p>
+        </div>
+        <button type="button" id="btn-start">Begin</button>
+    </section>
+    
+    <!-- quiz questions -->
+    <section class="quiz-element hide" id="question">
+    </section>
+ 
+
+    <!-- results page with score and form for saving score -->
+    <section class="quiz-element hide" id="results">
+        <h1 class="title-type" id="end">Results</h1>
+        <div id="score"> 
+        </div>
+        <div class="save-score">
+            <h4>Save your score</h4>
+            <form class="save-score">
+                <input type="text" name="initials" placeholder="Your Initials">
+            </form>
+            <button type="button" id="btn-end">Save Score</button>
+        </div>
+        <div>
+            <ul id="saved-scores">
+                <li>test</li>
+            </ul>
+        </div>
+
+    </section>
+
+
+
+    <script src="./assets/script.js"></script>
+</body>

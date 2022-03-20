@@ -1,0 +1,43 @@
+section {
+  font-size: 16px;
+  display: block;
+  max-width: 600px;
+  padding: 15px 30px 30px 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 65px auto;
+}
+
+h1 {
+  background-color: aqua;
+  color: black;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+button {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+form {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+form input {
+}
+
+.hide {
+  display: none;
+}
