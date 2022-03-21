@@ -34,6 +34,7 @@ const questions = [
 var indexCount = 0;
 var time = 30;
 var timer;
+var score = 0;
 
 var questionContainer = document.getElementById("question");
 var startContainer = document.getElementById("start");
@@ -89,7 +90,6 @@ var showQuestion = function () {
 };
 
 function questionClick() {
-  var score = 0;
   if (this.value !== questions[indexCount].answer) {
     console.log("wrong!!");
     time -= 5;
@@ -112,24 +112,17 @@ var endQuiz = function () {
   endContainer.classList.remove("hide");
   questionContainer.classList.add("hide");
   timerContainer.classList.add("hide");
+  var finalScoreDisplay = document.getElementById("score-display");
+  finalScoreDisplay.innerHTML = score;
   console.log(score);
 };
-
-// var nameFormHandler = function (event) {
-//   event.preventDefault();
-//   if
-// }
-
-// var savedScoreObj = {
-//   name: nameInput,
-//   value: score,
-// };
 
 var saveScore = function () {
   var savedScoreList = document.getElementById("saved-scores");
   var newScore = document.createElement("li");
   newScore.textContent = nameInput;
   savedScoreList.appendChild(newScore);
+  console.log(newScore);
 };
 
 endButton.addEventListener("click", saveScore);
