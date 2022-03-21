@@ -9,39 +9,42 @@
 
 <body>
     <!-- load page with start button -->
-    <section class="quiz-element" id="start">
-        <h1 class="title-type" >Quiz</h1>
+    <section class="quiz-start" id="start">
+        <h1 class="title-type" >Code Quiz</h1>
         <div>
-            <p>Here are a bunch of questions about everything.</p>
+            <p>Let's test your beginner coding knowledge!</br>
+            You will have 30 seconds to complete 5 questions.</br>
+            Correct answers will add 10 points to your score.</br>
+            Incorrect answers will subtract 5 seconds from your timer.</p>
         </div>
         <div>
             <p>Ready to Begin?</p>
         </div>
-        <button type="button" id="btn-start">Begin</button>
+        <button type="button" id="btn-start">Start Quiz</button>
     </section>
     
     <!-- quiz questions -->
-    <section class="quiz-element hide" id="question">
+    <section class="quiz-questions hide" id="question">
     </section>
-    <div class="hide" id="timer">
+    <div class="countdown hide" id="timer">
         <h3 id="time-left"></h3>
     </div>
  
 
     <!-- results page with score and form for saving score -->
-    <section class="quiz-element hide" id="results">
+    <section class="quiz-end hide" id="results">
         <h1 class="title-type" id="end">Results</h1>
         <div> 
         </div>
-        <div class="save-score">
-            <p>Your final score is <span id="score-display"></span> out of 100.</p>
+        <div>
+            <p>You scored a <span id="score-display"></span> out of a possible 50.</p>
             <h4>Save your score</h4>
             <form class="save-score">
                 <input type="text" name="initials" placeholder="Your Initials">
             </form>
             <button type="button" id="btn-end">Save Score</button>
         </div>
-        <div>
+        <div class="saved-scores">
             <ul id="saved-scores">
             </ul>
         </div>
