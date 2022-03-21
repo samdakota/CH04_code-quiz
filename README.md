@@ -18,9 +18,9 @@ The assignment required the following acceptance criteria:
     THEN I can save my initials and score
 
 ## Visuals
-
+<img src="/repository/capture.jpg">
 
 ## Deployed Application
 The deployed application can be viewed here:
 
-https://samdakota.github.io/GWU_Challenge01/
+https://samdakota.github.io/GWU_Challenge04/
